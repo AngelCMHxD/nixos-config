@@ -14,8 +14,7 @@
   home.username = "angel";
   home.homeDirectory = "/home/angel";
 
-  xdg.configFile."niri/config.kdl".source = ./niri.kdl;
-  xdg.configFile."niri/config.kdl".force = true;
+  xdg.configFile."niri/config.kdl".source = ./niri.kdl; # TODO: Move Noctalia settings to Nix language (using a Niri flake)
 
   programs.ssh = {
     enable = true;
@@ -24,14 +23,14 @@
     matchBlocks = {
       "github.com" = {
         addKeysToAgent = "yes";
-	identityFile = "~/.ssh/id_ed25519";
+        identityFile = "~/.ssh/id_ed25519";
       };
     };
   };
 
+  xdg.configFile."noctalia/settings.json".source = ./noctalia-settings.json; # TODO: Move Noctalia settings to Home Manager
   programs.noctalia-shell = {
     enable = true;
-
     plugins = {
       sources = [
         {
@@ -145,8 +144,8 @@
       
       userSettings = {
         "nix.enableLanguageServer" = true;
-	"workbench.colorTheme" = "Catppuccin Macchiato";
-	"workbench.iconTheme" = "catppuccin-macchiato";
+        "workbench.colorTheme" = "Catppuccin Macchiato";
+        "workbench.iconTheme" = "catppuccin-macchiato";
       };
     };
   };
