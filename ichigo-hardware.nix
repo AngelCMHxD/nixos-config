@@ -11,13 +11,13 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  boot.initrd.luks.devices."mnt" = {
+  boot.initrd.luks.devices."root" = {
     device = "/dev/disk/by-partlabel/crypt-root";
     crypttabExtraOpts = [ "tpm2-device=auto" ];
   };
 
   fileSystems."/" = {
-    device = "/dev/mapper/mnt";
+    device = "/dev/mapper/root";
     fsType = "btrfs";
   };
 
