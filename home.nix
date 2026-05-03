@@ -18,10 +18,11 @@
   home.homeDirectory = "/home/angel";
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
   home.packages = with pkgs; [ # Packages installed in the user profile (overrides system profile).
-    neovim
-    kdePackages.partitionmanager
-    python3
-    obs-studio
+    kdePackages.partitionmanager # For managing disks and partitions.
+    obs-studio # For recording.
+    seahorse # Manage the keyring with a GUI.
+    neovim # For editing files in the terminal.
+    python3 # Python. What more is there to say?
 
     # Fonts
     nerd-fonts.jetbrains-mono
