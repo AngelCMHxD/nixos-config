@@ -67,6 +67,7 @@
     prismlauncher # Minecraft launcher.
 
     # Development
+    termius # SSH client with GUI
     python3
     bun
 
