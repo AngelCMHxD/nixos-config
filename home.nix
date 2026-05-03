@@ -17,7 +17,10 @@
   home.username = "angel";
   home.homeDirectory = "/home/angel";
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
-  home.packages = with pkgs; [ # Packages installed in the user profile (overrides system profile).
+
+  # Packages installed in the user profile (overrides system profile).
+  home.packages = with pkgs; [
+    
     kdePackages.partitionmanager # For managing disks and partitions.
     obs-studio # For recording.
     seahorse # Manage the keyring with a GUI.
