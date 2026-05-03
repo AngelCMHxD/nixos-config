@@ -62,6 +62,8 @@
     seahorse # Manage the keyring with a GUI.
     neovim # For editing files in the terminal.
 
+    # Games
+    steam
     prismlauncher # Minecraft launcher.
 
     # Development
