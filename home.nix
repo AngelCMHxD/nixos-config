@@ -256,12 +256,14 @@
     };
   };
 
+  xdg.configFile."fish/themes".source = ./fish/themes;
   programs.fish = {
     enable = true;
     shellAliases = {
       nixos-rebuild-switch = "sudo nixos-rebuild switch --flake /etc/nixos#ichigo";
       nixos-rebuild-boot = "sudo nixos-rebuild boot --flake /etc/nixos#ichigo";
     };
+    shellInit = builtins.readFile ./fish/config.fish;
   };
 
   programs.vscode = {
