@@ -86,7 +86,7 @@ in
   time.timeZone = "America/Bogota";
 
   # WM and display settings.
-  services.logind.powerKey = "ignore"; # Disable power key, handle it on the WM.
+  services.logind.settings.Login.HandlePowerKey = "ignore"; # Disable power key, handle it on the WM.
   services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
   services.displayManager.plasma-login-manager.enable = true;
   programs.niri.enable = true;
