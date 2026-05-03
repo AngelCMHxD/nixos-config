@@ -20,7 +20,7 @@
 
   # Packages installed in the user profile (overrides system profile).
   home.packages = with pkgs; [
-    
+
     kdePackages.partitionmanager # For managing disks and partitions.
     obs-studio # For recording.
     seahorse # Manage the keyring with a GUI.
@@ -75,6 +75,7 @@
     enable = true;
     
     settings = {
+      theme = "Catppuccin Macchiato";
       custom-shader = "/etc/nixos/cursor_warp.glsl";
       font-family = "JetBrainsMono Nerd Font";
       adjust-cursor-thickness = 3;
