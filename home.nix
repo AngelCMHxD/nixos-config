@@ -57,6 +57,7 @@
     neovim
     kdePackages.partitionmanager
     python3
+    obs-studio
 
     # Fonts
     nerd-fonts.jetbrains-mono
