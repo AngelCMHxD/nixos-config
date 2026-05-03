@@ -128,8 +128,9 @@ in
   ];
 
   # SSH settings.
-  services.gnome.gcr-ssh-agent.enable = false;
-  programs.ssh.startAgent = true;
+  programs.ssh.startAgent = false;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
   services.dbus.enable = true;
   programs.gnupg.agent = {
     enable = true;
