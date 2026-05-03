@@ -10,21 +10,16 @@ let
 in
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./ichigo-hardware.nix
     ];
 
   boot.initrd.systemd.enable = true;
   boot.initrd.systemd.tpm2.enable = true;
 
-  boot.initrd.luks.devices."mnt" = {
-    device = "/dev/disk/by-uuid/a755ab20-a610-4b9d-bab2-9ce3622caa58";
-    crypttabExtraOpts = [ "tpm2-device=auto" ];
-  };
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Use the systemd-boot EFI boot loader.
+  # Use the Limine boot loader.
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
@@ -43,7 +38,7 @@ in
       };
     };
 
-    secureBoot = {
+    secureBoot = { # Auto setup for secure boot.
       enable = true;
       autoGenerateKeys = true;
       autoEnrollKeys = {
@@ -73,9 +68,11 @@ in
 
   networking.hostName = "ichigo"; # Define your hostname.
 
-  # Configure network connections interactively with nmcli or nmtui.
+  # Configure hardware settings.
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+
+  # Power management settings.
   services.tlp.enable = false;
   services.tuned.enable = true;
   services.tuned.ppdSupport = true;
@@ -95,18 +92,16 @@ in
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  # Use pipewire for audio.
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   programs.fish.enable = true;
   users.users.angel = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.fish; # Set the default shell to Fish.
     home = "/home/angel";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     # Packages on home.nix
@@ -117,12 +112,14 @@ in
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    sbctl
+    xwayland-satellite # For running X11 applications in niri.
+    sbctl # For managing secure boot keys.
+    nil # Nix LSP
+    nixd # Nix LSP
+
+    # Misc utilities
     git
     curl
-    nil
-    nixd
-    xwayland-satellite
   ];
 
   services.gnome.gcr-ssh-agent.enable = false;
@@ -140,28 +137,9 @@ in
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
+  # Do NOT change this option unless you know exactly what you are doing.
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.11"; # This should match what is in home.nix's home.stateVersion.
 
 }
