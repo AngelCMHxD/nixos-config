@@ -12,6 +12,42 @@
     inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
+  qt = {
+    enable = true;
+
+    platformTheme.name = "qtct";
+    style = {
+      package = with pkgs; [ darkly-qt5 darkly ];
+    };
+
+    qt5ctSettings = {
+      Appearance = {
+        color_scheme_path = "/home/angel/.config/qt5ct/colors/catppuccin-macchiato-mauve.conf";
+        style = "Darkly";
+        custom_palette = true;
+      };
+      Fonts = {
+        fixed = "\"JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0,Regular\"";
+        general = "\"Inter,10,-1,5,50,0,0,0,0,0,Regular\"";
+      };
+    };
+
+    qt6ctSettings = {
+      Appearance = {
+        color_scheme_path = "/home/angel/.config/qt6ct/colors/catppuccin-macchiato-mauve.conf";
+        style = "Darkly";
+        custom_palette = true;
+      };
+      Fonts = {
+        fixed = "\"JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0,Regular\"";
+        general = "\"Inter,10,-1,5,50,0,0,0,0,0,Regular\"";
+      };
+    };
+  };
+
+  xdg.configFile."qt5ct/colors".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors";
+  xdg.configFile."qt6ct/colors".source = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors";
+
   # User/Home settings
   programs.home-manager.enable = true;
   home.username = "angel";
