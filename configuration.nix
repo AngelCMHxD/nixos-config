@@ -125,6 +125,7 @@ in
   services.gnome.gcr-ssh-agent.enable = false;
   programs.ssh.startAgent = true;
   services.dbus.enable = true;
+  services.usbmuxd.enable = true; # For palera1n: https://github.com/palera1n/palera1n
 
   programs.gnupg.agent = {
     enable = true;
