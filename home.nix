@@ -57,12 +57,22 @@
     neovim
     kdePackages.partitionmanager
     python3
-    ghostty # TODO: Move settings to Home Manager
 
     # Fonts
     nerd-fonts.jetbrains-mono
     inter
   ];
+
+  programs.ghostty = {
+    enable = true;
+    
+    settings = {
+      custom-shader = "/etc/nixos/cursor_warp.glsl";
+      font-family = "JetBrainsMono Nerd Font";
+      adjust-cursor-thickness = 3;
+      quit-after-last-window-closed = false;
+    };
+  };
 
   programs.spicetify = let
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
