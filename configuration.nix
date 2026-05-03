@@ -71,6 +71,7 @@ in
   # Configure hardware settings.
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  services.logind.powerKey = "ignore"; # Disable power key, handle it on the WM.
 
   # Power management settings.
   services.tlp.enable = false;
