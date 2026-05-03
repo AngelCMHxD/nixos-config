@@ -9,6 +9,7 @@
     inputs.noctalia.homeModules.default
     inputs.zen-browser.homeModules.beta
     inputs.nixcord.homeModules.nixcord
+    inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
   home.username = "angel";
@@ -62,6 +63,21 @@
     nerd-fonts.jetbrains-mono
     inter
   ];
+
+  programs.spicetify = let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+  in {
+    enable = true;
+
+    enabledExtensions = with spicePkgs.extensions; [
+      copyToClipboard
+      adblock
+      beautifulLyrics
+    ];
+
+    theme = spicePkgs.themes.comfy;
+    colorScheme = "catppuccin-macchiato";
+  };
 
   programs.zed-editor = {
     enable = true;
