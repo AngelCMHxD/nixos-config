@@ -12,22 +12,24 @@
     inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
+  # User/Home settings
+  programs.home-manager.enable = true;
   home.username = "angel";
   home.homeDirectory = "/home/angel";
+  home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
+  home.packages = with pkgs; [ # Packages installed in the user profile (overrides system profile).
+    neovim
+    kdePackages.partitionmanager
+    python3
+    obs-studio
 
+    # Fonts
+    nerd-fonts.jetbrains-mono
+    inter
+  ];
+
+  # WM and interface settings
   xdg.configFile."niri/config.kdl".source = ./niri.kdl; # TODO: Move Noctalia settings to Nix language (using a Niri flake)
-
-  programs.ssh = {
-    enable = true;
-    enableDefaultConfig = false;
-    
-    matchBlocks = {
-      "github.com" = {
-        addKeysToAgent = "yes";
-        identityFile = "~/.ssh/id_ed25519";
-      };
-    };
-  };
 
   xdg.configFile."noctalia/settings.json".source = ./noctalia-settings.json; # TODO: Move Noctalia settings to Home Manager
   programs.noctalia-shell = {
@@ -50,19 +52,17 @@
     };
   };
 
-  # Matched the system.stateVersion on configuration.nix
-  home.stateVersion = "25.11";
-
-  home.packages = with pkgs; [
-    neovim
-    kdePackages.partitionmanager
-    python3
-    obs-studio
-
-    # Fonts
-    nerd-fonts.jetbrains-mono
-    inter
-  ];
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    
+    matchBlocks = {
+      "github.com" = {
+        addKeysToAgent = "yes";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+    };
+  };
 
   programs.ghostty = {
     enable = true;
@@ -234,6 +234,4 @@
       };
     };
   };
-
-  programs.home-manager.enable = true;
 }

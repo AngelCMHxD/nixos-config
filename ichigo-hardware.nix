@@ -7,17 +7,18 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
+
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
-
-  fileSystems."/" = {
-    device = "/dev/mapper/mnt";
-    fsType = "btrfs";
-  };
 
   boot.initrd.luks.devices."mnt" = {
     device = "/dev/disk/by-partlabel/crypt-root";
     crypttabExtraOpts = [ "tpm2-device=auto" ];
+  };
+
+  fileSystems."/" = {
+    device = "/dev/mapper/mnt";
+    fsType = "btrfs";
   };
 
   fileSystems."/boot" = {

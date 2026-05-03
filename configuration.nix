@@ -14,18 +14,21 @@ in
       ./ichigo-hardware.nix
     ];
 
+  # Use systemd for the init system and enable TPM2 support for auto-unlock of the LUKS volume.
   boot.initrd.systemd.enable = true;
   boot.initrd.systemd.tpm2.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Use the Limine boot loader.
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
     
     style = {
-      wallpapers = []; # Disable NixOS background.
+      # Disable NixOS background.
+      wallpapers = [];
 
       # Catppuccin Theme. Taken from https://github.com/catppuccin/limine/blob/main/themes/catppuccin-macchiato.conf
       graphicalTerminal = {
@@ -38,7 +41,8 @@ in
       };
     };
 
-    secureBoot = { # Auto setup for secure boot.
+    # Auto setup for secure boot.
+    secureBoot = {
       enable = true;
       autoGenerateKeys = true;
       autoEnrollKeys = {
@@ -57,21 +61,20 @@ in
           path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
       '';
   };
-      
-  boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable envfs and nix-ld for better support of non-Nix apps.
   services.envfs.enable = true;
   programs.nix-ld.enable = true;
 
   # Use testing kernel from nixpkgs-unstable.
   boot.kernelPackages = pkgsUnstable.linuxPackages_testing;
 
-  networking.hostName = "ichigo"; # Define your hostname.
+  # Define hostname.
+  networking.hostName = "ichigo";
 
   # Configure hardware settings.
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
-  services.logind.powerKey = "ignore"; # Disable power key, handle it on the WM.
 
   # Power management settings.
   services.tlp.enable = false;
@@ -79,19 +82,14 @@ in
   services.tuned.ppdSupport = true;
   services.upower.enable = true;
 
-
-  # Set your time zone.
+  # Set the time zone.
   time.timeZone = "America/Bogota";
 
-  # Disable the X11 windowing system. (let niri handle it using xwayland-satellite)
-  services.xserver.enable = false;
-
-  # Use niri
+  # WM and display settings.
+  services.logind.powerKey = "ignore"; # Disable power key, handle it on the WM.
+  services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
   services.displayManager.plasma-login-manager.enable = true;
   programs.niri.enable = true;
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
 
   # Use pipewire for audio.
   services.pipewire = {
@@ -99,6 +97,13 @@ in
     pulse.enable = true;
   };
 
+  # Enable CUPS to print documents.
+  # services.printing.enable = true;
+
+  # Allow unfree packages.
+  nixpkgs.config.allowUnfree = true;
+
+  # Setup the user account.
   programs.fish.enable = true;
   users.users.angel = {
     isNormalUser = true;
@@ -108,10 +113,9 @@ in
     # Packages on home.nix
   };
 
-  nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
+  # List of packages installed in system profile.
+  # Use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     xwayland-satellite # For running X11 applications in niri.
     sbctl # For managing secure boot keys.
@@ -123,15 +127,17 @@ in
     curl
   ];
 
+  # SSH settings.
   services.gnome.gcr-ssh-agent.enable = false;
   programs.ssh.startAgent = true;
   services.dbus.enable = true;
-  services.usbmuxd.enable = true; # For palera1n: https://github.com/palera1n/palera1n
-
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;
   };
+
+  # For palera1n: https://github.com/palera1n/palera1n
+  services.usbmuxd.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
