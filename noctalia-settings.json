@@ -267,12 +267,12 @@
     "settingsPanelSideBarCardStyle": false
   },
   "location": {
-    "name": "",
+    "name": "Bogotá",
     "weatherEnabled": true,
     "weatherShowEffects": true,
     "weatherTaliaMascotAlways": false,
     "useFahrenheit": false,
-    "use12hourFormat": false,
+    "use12hourFormat": true,
     "showWeekNumberInCalendar": false,
     "showCalendarEvents": true,
     "showCalendarWeather": true,
@@ -280,7 +280,7 @@
     "firstDayOfWeek": -1,
     "hideWeatherTimezone": false,
     "hideWeatherCityName": false,
-    "autoLocate": false
+    "autoLocate": true
   },
   "calendar": {
     "cards": [
@@ -354,7 +354,7 @@
     "enableClipboardChips": true,
     "clipboardWatchTextCommand": "wl-paste --type text --watch cliphist store",
     "clipboardWatchImageCommand": "wl-paste --type image --watch cliphist store",
-    "position": "center",
+    "position": "top_center",
     "pinnedApps": [],
     "sortByMostUsed": true,
     "terminalCommand": "alacritty -e",
@@ -369,7 +369,7 @@
     "enableSessionSearch": true,
     "ignoreMouseInput": false,
     "screenshotAnnotationTool": "",
-    "overviewLayer": false,
+    "overviewLayer": true,
     "density": "default"
   },
   "controlCenter": {
@@ -502,12 +502,12 @@
   },
   "sessionMenu": {
     "enableCountdown": true,
-    "countdownDuration": 10000,
+    "countdownDuration": 5000,
     "position": "center",
     "showHeader": true,
     "showKeybinds": true,
     "largeButtonsStyle": true,
-    "largeButtonsLayout": "single-row",
+    "largeButtonsLayout": "grid",
     "powerOptions": [
       {
         "action": "lock",
@@ -600,14 +600,15 @@
   },
   "osd": {
     "enabled": true,
-    "location": "top_right",
+    "location": "bottom",
     "autoHideMs": 2000,
     "overlayLayer": true,
     "backgroundOpacity": 1,
     "enabledTypes": [
       0,
       1,
-      2
+      2,
+      3
     ],
     "monitors": []
   },
@@ -630,7 +631,7 @@
   },
   "colorSchemes": {
     "useWallpaperColors": false,
-    "predefinedScheme": "Noctalia (default)",
+    "predefinedScheme": "Catppuccin",
     "darkMode": true,
     "schedulingMode": "off",
     "manualSunrise": "06:30",
@@ -683,10 +684,37 @@
     "customCommands": "[]"
   },
   "desktopWidgets": {
-    "enabled": false,
+    "enabled": true,
     "overviewEnabled": true,
-    "gridSnap": false,
+    "gridSnap": true,
     "gridSnapScale": false,
-    "monitorWidgets": []
+    "monitorWidgets": [
+      {
+        "name": "eDP-1",
+        "widgets": [
+          {
+            "hideMode": "hidden",
+            "id": "MediaPlayer",
+            "roundedCorners": true,
+            "scale": 1,
+            "showAlbumArt": true,
+            "showBackground": true,
+            "showButtons": true,
+            "showVisualizer": true,
+            "visualizerType": "linear",
+            "x": 48,
+            "y": 912
+          },
+          {
+            "id": "Weather",
+            "roundedCorners": true,
+            "scale": 1,
+            "showBackground": true,
+            "x": 1512,
+            "y": 912
+          }
+        ]
+      }
+    ]
   }
 }
