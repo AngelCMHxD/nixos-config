@@ -57,6 +57,10 @@
     kdePackages.partitionmanager
     python3
     ghostty # TODO: Move settings to Home Manager
+
+    # Fonts
+    nerd-fonts.jetbrains-mono
+    inter
   ];
 
   programs.zed-editor = {
@@ -107,6 +111,9 @@
       tab_size = 4;
       icon_theme = "Catppuccin Macchiato";
       theme = "Catppuccin Macchiato";
+
+      ui_font_family = "Inter";
+      buffer_font_family = "JetBrainsMono Nerd Font";
     };
   };
 
