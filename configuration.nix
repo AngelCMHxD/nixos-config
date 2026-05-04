@@ -125,6 +125,9 @@ in
     # Misc utilities
     git
     curl
+    wget
+    jq
+    unzip
   ];
 
   # SSH settings.
