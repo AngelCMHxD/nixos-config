@@ -74,6 +74,10 @@
     # Fonts
     nerd-fonts.jetbrains-mono
     inter
+
+    # Some Microsoft fonts.
+    corefonts
+    vista-fonts
   ];
 
   # WM and interface settings
