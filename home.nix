@@ -135,8 +135,12 @@
     presets = ["nerd-font-symbols"];
 
     settings = {
-      palette = "catppuccin-macchiato";
+      character = {
+        success_symbol = "[->](bold green)";
+        error_symbol = "[  ->](bold red)";
+      };
 
+      palette = "catppuccin-macchiato";
       palettes.catppuccin-macchiato = {
         rosewater = "#f4dbd6";
         flamingo = "#f0c6c6";
