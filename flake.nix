@@ -6,6 +6,7 @@
     nixcord.url = "github:FlameFlag/nixcord";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -36,7 +37,10 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        { nixpkgs.config.allowUnfree = true; }
+        { 
+          nixpkgs.config.allowUnfree = true; 
+          nixpkgs.overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+        }
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {
