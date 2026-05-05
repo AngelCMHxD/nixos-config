@@ -127,7 +127,9 @@
           "drawerEnabled": true,
           "hidePassive": false,
           "id": "Tray",
-          "pinned": []
+          "pinned": [
+            "Discord"
+          ]
         },
         {
           "hideWhenZero": false,
