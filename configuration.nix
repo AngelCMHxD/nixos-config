@@ -18,8 +18,6 @@ in
   boot.initrd.systemd.enable = true;
   boot.initrd.systemd.tpm2.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   # Use the Limine boot loader.
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.limine = {
@@ -99,9 +97,6 @@ in
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
-
-  # Allow unfree packages.
-  nixpkgs.config.allowUnfree = true;
 
   # Setup the user account.
   programs.fish.enable = true;
