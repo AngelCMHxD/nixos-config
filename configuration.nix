@@ -1,13 +1,7 @@
 # Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, inputs, pkgs, ... }:
-let
-  pkgsUnstable = import inputs."nixpkgs-unstable" {
-    system = pkgs.stdenv.hostPlatform.system;
-    config = config.nixpkgs.config;
-  };
-in
+{ pkgs, ... }:
 {
   imports =
     [
@@ -70,7 +64,7 @@ in
   programs.nix-ld.enable = true;
 
   # Use testing kernel from nixpkgs-unstable.
-  boot.kernelPackages = pkgsUnstable.linuxPackages_testing;
+  boot.kernelPackages = pkgs.linuxPackages_testing;
 
   # Define hostname.
   networking.hostName = "ichigo";
