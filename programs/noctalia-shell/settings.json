@@ -302,8 +302,8 @@
   },
   "wallpaper": {
     "enabled": true,
-    "overviewEnabled": false,
-    "directory": "/home/angel/Pictures/Wallpapers",
+    "overviewEnabled": true,
+    "directory": "/etc/nixos/wallpapers",
     "monitorDirectories": [],
     "enableMultiMonitorDirectories": false,
     "showHiddenFiles": false,
@@ -319,18 +319,15 @@
     "randomIntervalSec": 300,
     "transitionDuration": 1500,
     "transitionType": [
-      "fade",
-      "disc",
       "stripes",
-      "wipe",
-      "pixelate",
-      "honeycomb"
+      "honeycomb",
+      "disc"
     ],
     "skipStartupTransition": false,
     "transitionEdgeSmoothness": 0.05,
     "panelPosition": "follow_bar",
     "hideWallpaperFilenames": false,
-    "useOriginalImages": false,
+    "useOriginalImages": true,
     "overviewBlur": 0.4,
     "overviewTint": 0.6,
     "useWallhaven": false,
