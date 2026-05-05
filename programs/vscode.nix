@@ -4,19 +4,24 @@
     enable = true;
     mutableExtensionsDir = false;
     profiles.default = {
-      extensions = with pkgs.vscode-marketplace; [
-        catppuccin.catppuccin-vsc
-        catppuccin.catppuccin-vsc-icons
-        jnoortheen.nix-ide
-        biomejs.biome
-        oven.bun-vscode
-        icrawl.discord-vscode
-        janisdd.vscode-edit-csv
-        eamodio.gitlens
-        ms-python.python
-        ms-python.vscode-pylance
-        github.copilot-chat
-        shd101wyy.markdown-preview-enhanced
+      extensions = pkgs.nix4vscode.forVscode [
+        # Theming
+        "catppuccin.catppuccin-vsc"
+        "catppuccin.catppuccin-vsc-icons"
+
+        # LSP and formatting
+        "jnoortheen.nix-ide"
+        "biomejs.biome"
+        "oven.bun-vscode"
+        "ms-python.python"
+        "ms-python.vscode-pylance"
+
+        # Misc
+        "eamodio.gitlens"
+        "janisdd.vscode-edit-csv"
+        "icrawl.discord-vscode"
+        "github.copilot-chat"
+        "shd101wyy.markdown-preview-enhanced"
       ];
       
       userSettings = {
