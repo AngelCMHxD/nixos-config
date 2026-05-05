@@ -124,6 +124,9 @@
     unzip
   ];
 
+  # Flatpak support.
+  services.flatpak.enable = true;
+
   # SSH settings.
   programs.ssh.startAgent = false;
   services.gnome.gnome-keyring.enable = true;

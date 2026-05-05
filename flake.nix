@@ -5,6 +5,7 @@
 
     nixcord.url = "github:FlameFlag/nixcord";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     
     home-manager = {
       url = "github:nix-community/home-manager";
