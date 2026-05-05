@@ -255,8 +255,8 @@
     "smoothScrollEnabled": true
   },
   "ui": {
-    "fontDefault": "Sans Serif",
-    "fontFixed": "monospace",
+    "fontDefault": "Inter SemiBold",
+    "fontFixed": "JetBrainsMono NF",
     "fontDefaultScale": 1,
     "fontFixedScale": 1,
     "tooltipsEnabled": false,
@@ -269,7 +269,7 @@
     "settingsPanelSideBarCardStyle": false
   },
   "location": {
-    "name": "Bogotá",
+    "name": "Medellín",
     "weatherEnabled": true,
     "weatherShowEffects": true,
     "weatherTaliaMascotAlways": false,
@@ -302,12 +302,12 @@
   },
   "wallpaper": {
     "enabled": true,
-    "overviewEnabled": true,
-    "directory": "/etc/nixos/wallpapers",
+    "overviewEnabled": false,
+    "directory": "/etc/nixos/assets/wallpapers",
     "monitorDirectories": [],
     "enableMultiMonitorDirectories": false,
     "showHiddenFiles": false,
-    "viewMode": "single",
+    "viewMode": "recursive",
     "setWallpaperOnAllMonitors": true,
     "linkLightAndDarkWallpapers": true,
     "fillMode": "crop",
@@ -353,7 +353,7 @@
     "enableClipboardChips": true,
     "clipboardWatchTextCommand": "wl-paste --type text --watch cliphist store",
     "clipboardWatchImageCommand": "wl-paste --type image --watch cliphist store",
-    "position": "top_center",
+    "position": "center",
     "pinnedApps": [],
     "sortByMostUsed": true,
     "terminalCommand": "alacritty -e",
