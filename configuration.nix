@@ -14,6 +14,11 @@ in
       ./ichigo-hardware.nix
     ];
 
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    accept-flake-config = true;
+  };
+
   # Use systemd for the init system and enable TPM2 support for auto-unlock of the LUKS volume.
   boot.initrd.systemd.enable = true;
   boot.initrd.systemd.tpm2.enable = true;
