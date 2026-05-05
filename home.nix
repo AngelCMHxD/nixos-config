@@ -14,6 +14,7 @@
   home.homeDirectory = "/home/angel";
   home.shell.enableFishIntegration = true;
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
+  home.file.".face".source = ./profile-icon.png;
 
   # Packages installed in the user profile (overrides system profile).
   home.packages = with pkgs; [
