@@ -24,6 +24,7 @@
     seahorse # Manage the keyring with a GUI.
     neovim # For editing files in the terminal.
     ente-auth # 2FA
+    onlyoffice-desktopeditors # Office suite
 
     # Games
     steam
