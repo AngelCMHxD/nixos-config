@@ -41,7 +41,7 @@
 
         # Text editor
         "editor.formatOnSave" = true;
-        "editor.cursorSmoothCaretAnimation" = true;
+        "editor.cursorSmoothCaretAnimation" = "on";
         "editor.smoothScrolling" = true;
         "editor.fontFamily" = "'JetBrainsMono Nerd Font', monospace";
         "editor.fontLigatures" = true;
