@@ -16,9 +16,13 @@
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
   home.file.".face".source = ./assets/profile-icon.png;
 
+  # Clipboard manager.
+  services.wl-clip-persist.enable = true;
+  services.cliphist.enable = true;
+
   # Packages installed in the user profile (overrides system profile).
   home.packages = with pkgs; [
-
+    wl-clipboard # For clipboard management.
     kdePackages.partitionmanager # For managing disks and partitions.
     obs-studio # For recording.
     seahorse # Manage the keyring with a GUI.
