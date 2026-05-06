@@ -41,10 +41,12 @@
         # Spotify
         fixSpotifyEmbeds.enable = true;
         spotifyCrack.enable = true;
+        spotifyActivityToggle.enable = true;
 
         consoleJanitor.enable = true;
         experiments.enable = true;
         noDevtoolsWarning.enable = true;
+        gameActivityToggle.enable = true;
       };
     };
   };
