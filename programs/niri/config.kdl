@@ -441,8 +441,9 @@ binds {
     Mod+Shift+P hotkey-overlay-title="Stop animated wallpaper: mpvpaper" { spawn-sh "sh ~/.config/scripts/toggle_wallpaper.sh"; }
     Mod+Ctrl+Shift+S hotkey-overlay-title="Open settings: noctalia" { spawn-sh "noctalia-shell ipc call settings toggle"; }
     Mod+Ctrl+Shift+W hotkey-overlay-title="Open wallpaper: noctalia" { spawn-sh "noctalia-shell ipc call wallpaper toggle"; }
-    Mod+V hotkey-overlay-title="Open clipboard: noctalia" { spawn-sh "noctalia-shell ipc call plugin:clipper toggle"; }
-    Mod+Ctrl+Shift+N hotkey-overlay-title="Restart noctalia shell" { spawn-sh "killall qs ; noctalia-shell --no-duplicate"; }
+    Mod+V hotkey-overlay-title="Open clipboard: noctalia" { spawn-sh "noctalia-shell ipc call plugin:clipboard toggle"; }
+    Mod+G hotkey-overlay-title="Open github feed: noctalia" { spawn-sh "noctalia-shell ipc call plugin:github-feed toggle"; }
+    Mod+Ctrl+Shift+N hotkey-overlay-title="Restart noctalia shell" { spawn-sh "pkill quickshell ; noctalia-shell --no-duplicate"; }
     XF86PowerOff hotkey-overlay-title="Open power menu: noctalia" { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }
 
 

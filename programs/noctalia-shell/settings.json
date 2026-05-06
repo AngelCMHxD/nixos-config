@@ -105,6 +105,19 @@
       ],
       "right": [
         {
+          "defaultSettings": {
+            "activeColor": "primary",
+            "camFilterRegex": "",
+            "enableToast": false,
+            "hideInactive": true,
+            "iconSpacing": 4,
+            "inactiveColor": "none",
+            "micFilterRegex": "",
+            "removeMargins": false
+          },
+          "id": "plugin:privacy-indicator"
+        },
+        {
           "compactMode": false,
           "hideMode": "hidden",
           "hideWhenIdle": false,
@@ -169,13 +182,13 @@
         },
         {
           "colorizeDistroLogo": false,
-          "colorizeSystemIcon": "none",
+          "colorizeSystemIcon": "primary",
           "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": true,
           "icon": "noctalia",
           "id": "ControlCenter",
-          "useDistroLogo": false
+          "useDistroLogo": true
         }
       ]
     },
