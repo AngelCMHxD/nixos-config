@@ -3,7 +3,7 @@
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixcord.url = "github:FlameFlag/nixcord";
+    nixcord.url = "github:FlameFlag/nixcord/dev";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 

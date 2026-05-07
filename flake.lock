@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778009629,
-        "narHash": "sha256-nUoQtf4Zq7DRYJrfv904hjrxjAlWVP6a1pNNFKx3FCg=",
+        "lastModified": 1778144356,
+        "narHash": "sha256-dGM+QCstz/DyLB68+JK5GWyMx4QSqmOJEVgZmy63d/g=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "00ed86e58bb6979a7921859fd1615d19382eac5c",
+        "rev": "e4419d3123b780d5f4c0bceeace450424387638c",
         "type": "github"
       },
       "original": {
@@ -76,11 +76,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1777952350,
-        "narHash": "sha256-3r9arHDyK+2Lbf8CPBBbqmPK652DMdIYJ8AdlMRbVkQ=",
+        "lastModified": 1778125841,
+        "narHash": "sha256-q+eVmnqxTajZdAC9OwJl7pZ7g0cyXMdNOHg8w5wHb8o=",
         "owner": "nix-community",
         "repo": "nix4vscode",
-        "rev": "a79ef8b728dc63dc3dd7c91d884a51a97d09de79",
+        "rev": "0cb4690e8efd700c972f0fe944ae96b7a5c2293e",
         "type": "github"
       },
       "original": {
@@ -97,15 +97,16 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1777999064,
-        "narHash": "sha256-SrwD8kYIMU11Gsw+2oLu48jgy1e9/6q6kMMS4LVq53A=",
+        "lastModified": 1778161894,
+        "narHash": "sha256-HGEN6jlbClw/alDXm5BxlYphYG5AhFlWFuOD9gMieS8=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "435717fe5daad9c77b3042ea9bdd1f054715e498",
+        "rev": "a10b358ba737a7a586c94bd118dc0cf895a4c8ef",
         "type": "github"
       },
       "original": {
         "owner": "FlameFlag",
+        "ref": "dev",
         "repo": "nixcord",
         "type": "github"
       }
@@ -194,11 +195,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1777859147,
-        "narHash": "sha256-0vCgxdwrxBkHmqNgJtUMGCFwSV5a6AgYdKAgBCtFFPM=",
+        "lastModified": 1778104114,
+        "narHash": "sha256-+tbqLv7IW5Aem8kGF6cp4n3MtNBcwqmuGlMt6S1kQjs=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "6b48834dd6c3913d211476ab2f964f3fb100675e",
+        "rev": "eb2b53ddaa7564f5c93031cbe65cd5b6ef3c12a9",
         "type": "github"
       },
       "original": {
