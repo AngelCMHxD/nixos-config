@@ -268,7 +268,7 @@
     "smoothScrollEnabled": true
   },
   "ui": {
-    "fontDefault": "Inter SemiBold",
+    "fontDefault": "Poppins SemiBold",
     "fontFixed": "JetBrainsMono NF",
     "fontDefaultScale": 1,
     "fontFixedScale": 1,

@@ -47,7 +47,19 @@
     # Some Microsoft fonts.
     corefonts
     vista-fonts
+    google-fonts
   ];
+
+  # Font settings
+  fonts.fontconfig = {
+    enable = true;
+
+    defaultFonts = {
+      monospace = [ "JetBrainsMono Nerd Font" ];
+      sans = [ "Poppins" ];
+      serif = [ "Noto Serif" ];
+    };
+  };
 
   # GTK theming.
   gtk = {
