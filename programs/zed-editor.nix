@@ -49,7 +49,7 @@
       icon_theme = "Catppuccin Macchiato";
       theme = "Catppuccin Macchiato";
 
-      ui_font_family = "Inter";
+      ui_font_family = "Poppins";
       buffer_font_family = "JetBrainsMono Nerd Font";
     };
   };
