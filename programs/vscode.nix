@@ -52,6 +52,22 @@
         "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.cursorWidth" = 2;
         "terminal.integrated.cursorBlinking" = true;
+
+        # JSON Schemas
+        "json.schemaDownload.trustedDomains" = {
+          # Default trusted domains from the json-language-features extension
+          # Available at https://github.com/microsoft/vscode/blob/main/extensions/json-language-features/package.json
+          "https://schemastore.azurewebsites.net/" = true;
+          "https://raw.githubusercontent.com/microsoft/vscode/" = true;
+          "https://raw.githubusercontent.com/devcontainers/spec/" = true;
+          "https://www.schemastore.org/" = true;
+          "https://json.schemastore.org/" = true;
+          "https://json-schema.org/" = true;
+          "https://developer.microsoft.com/json-schemas/" = true;
+
+          # Additional trusted domains
+          "https://biomejs.dev" = true;
+        };
       };
     };
   };
