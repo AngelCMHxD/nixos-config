@@ -58,6 +58,7 @@
       monospace = [ "JetBrainsMono Nerd Font" ];
       sansSerif = [ "Poppins" ];
       serif = [ "Noto Serif" ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
 
