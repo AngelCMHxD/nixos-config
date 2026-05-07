@@ -19,6 +19,7 @@
 
   # Use the Limine boot loader.
   boot.loader.efi.canTouchEfiVariables = true;
+  catppuccin.limine.enable = true;
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
@@ -26,16 +27,6 @@
     style = {
       # Disable NixOS background.
       wallpapers = [];
-
-      # Catppuccin Theme. Taken from https://github.com/catppuccin/limine/blob/main/themes/catppuccin-macchiato.conf
-      graphicalTerminal = {
-        palette = "24273a;ed8796;a6da95;eed49f;8aadf4;f5bde6;8bd5ca;cad3f5";
-        brightPalette = "5b6078;ed8796;a6da95;eed49f;8aadf4;f5bde6;8bd5ca;cad3f5";
-        background = "24273a";
-        foreground = "cad3f5";
-        brightBackground = "5b6078";
-        brightForeground = "cad3f5";
-      };
     };
 
     # Auto setup for secure boot.

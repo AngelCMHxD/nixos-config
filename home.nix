@@ -1,11 +1,13 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
 {
   imports = [
     ./programs
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   # User/Home settings
@@ -15,6 +17,8 @@
   home.shell.enableFishIntegration = true;
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
   home.file.".face".source = ./assets/profile-icon.png;
+  catppuccin.accent = "mauve";
+  catppuccin.flavor = "macchiato";
 
   # Clipboard manager.
   services.wl-clip-persist.enable = true;
@@ -84,6 +88,7 @@
   };
 
   # QT theming and settings.
+  catppuccin.qt5ct.enable = true;
   qt = {
     enable = true;
 
@@ -94,9 +99,7 @@
 
     qt5ctSettings = {
       Appearance = {
-        color_scheme_path = "/home/angel/.config/qt5ct/colors/catppuccin-macchiato-mauve.conf";
         style = "Darkly";
-        custom_palette = true;
       };
       Fonts = {
         fixed = "\"JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0,Regular\"";
@@ -106,9 +109,7 @@
 
     qt6ctSettings = {
       Appearance = {
-        color_scheme_path = "/home/angel/.config/qt6ct/colors/catppuccin-macchiato-mauve.conf";
         style = "Darkly";
-        custom_palette = true;
       };
       Fonts = {
         fixed = "\"JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0,Regular\"";
@@ -116,7 +117,4 @@
       };
     };
   };
-
-  xdg.configFile."qt5ct/colors".source = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors";
-  xdg.configFile."qt6ct/colors".source = "${pkgs.catppuccin-qt5ct}/share/qt6ct/colors";
 }

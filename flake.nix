@@ -6,6 +6,7 @@
     nixcord.url = "github:FlameFlag/nixcord/dev";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    catppuccin.url = "github:catppuccin/nix";
 
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
@@ -36,7 +37,7 @@
     extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, ... }: {
     nixosConfigurations.ichigo = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -46,6 +47,7 @@
           nixpkgs.overlays = [ inputs.nix4vscode.overlays.default ];
         }
         ./configuration.nix
+        catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

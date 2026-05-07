@@ -4,6 +4,7 @@
     inputs.zen-browser.homeModules.beta
   ];
 
+  # Manual theming as catppuccin/nix doesn't support the zen-browser flake.
   xdg.configFile."zen/default/chrome/userChrome.css".source = ./userChrome.css;
   xdg.configFile."zen/default/chrome/userContent.css".source = ./userContent.css;
   programs.zen-browser = {

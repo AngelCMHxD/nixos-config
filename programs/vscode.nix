@@ -2,12 +2,13 @@
 {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = false; # Make extensions read-only and only installable via Nix.
     profiles.default = {
       extensions = pkgs.nix4vscode.forVscode [
         # Theming
         "catppuccin.catppuccin-vsc"
         "catppuccin.catppuccin-vsc-icons"
+        "drcika.apc-extension"
 
         # LSP and formatting
         "jnoortheen.nix-ide"
@@ -28,6 +29,15 @@
         # Theme
         "workbench.colorTheme" = "Catppuccin Macchiato";
         "workbench.iconTheme" = "catppuccin-macchiato";
+        "apc.font.family" = "Poppins";
+        "apc.monospace.font.family" = "JetBrainsMono Nerd Font";
+        "apc.electron" = {
+          "titleBarStyle" = "hiddenInset";
+          "trafficLightPosition" = {
+            "x" = 7;
+            "y" = 5;
+          };
+        };
 
         # Formatter
         "editor.defaultFormatter" = "biomejs.biome";

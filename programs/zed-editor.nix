@@ -1,11 +1,11 @@
 { ... }:
 {
+  catppuccin.zed.enable = true;
+  catppuccin.zed.icons.enable = true;
   programs.zed-editor = {
     enable = true;
 
     extensions = [
-      "catppuccin"
-      "catppuccin-icons"
       "discord-presence"
     ];
 
@@ -46,8 +46,6 @@
       buffer_line_height.custom = 1.55;
 
       tab_size = 4;
-      icon_theme = "Catppuccin Macchiato";
-      theme = "Catppuccin Macchiato";
 
       ui_font_family = "Poppins";
       buffer_font_family = "JetBrainsMono Nerd Font";
