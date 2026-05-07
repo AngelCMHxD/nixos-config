@@ -29,6 +29,7 @@
     neovim # For editing files in the terminal.
     ente-auth # 2FA
     onlyoffice-desktopeditors # Office suite
+    nautilus # File manager
 
     # Games
     steam
@@ -47,6 +48,27 @@
     corefonts
     vista-fonts
   ];
+
+  # GTK theming.
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Colloid-Purple-Dark-Catppuccin";
+      package = pkgs.colloid-gtk-theme.override {
+        themeVariants = [ "purple" ];
+        colorVariants = [ "dark" ];
+        sizeVariants = [ "standard" ];
+        tweaks = [ "catppuccin" ];
+      };
+    };
+    iconTheme = {
+      name = "Colloid-Purple-Catppuccin-Dark";
+      package = pkgs.colloid-icon-theme.override {
+        schemeVariants = [ "catppuccin" ];
+        colorVariants = [ "purple" ];
+      };
+    };
+  };
 
   # QT theming and settings.
   qt = {
