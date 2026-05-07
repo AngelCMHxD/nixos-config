@@ -56,7 +56,7 @@
 
     defaultFonts = {
       monospace = [ "JetBrainsMono Nerd Font" ];
-      sans = [ "Poppins" ];
+      sansSerif = [ "Poppins" ];
       serif = [ "Noto Serif" ];
     };
   };
