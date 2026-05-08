@@ -317,6 +317,13 @@ animations {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
 
+// Keep steam notifications on the bottom right corner of the screen.
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
 window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
