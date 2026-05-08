@@ -62,6 +62,7 @@
   # Configure hardware settings.
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  hardware.steam-hardware.enable = true;
 
   # Power management settings.
   services.tlp.enable = false;
@@ -93,7 +94,7 @@
     isNormalUser = true;
     shell = pkgs.fish; # Set the default shell to Fish.
     home = "/home/angel";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "input" ];
     # Packages on home.nix
   };
 
