@@ -508,7 +508,7 @@
     "networkPanelView": "wifi",
     "wifiDetailsViewMode": "grid",
     "bluetoothDetailsViewMode": "grid",
-    "bluetoothHideUnnamedDevices": false,
+    "bluetoothHideUnnamedDevices": true,
     "disableDiscoverability": false,
     "bluetoothAutoConnect": true
   },
