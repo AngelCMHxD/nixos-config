@@ -19,7 +19,6 @@
 
   # Use the Limine boot loader.
   boot.loader.efi.canTouchEfiVariables = true;
-  catppuccin.limine.enable = true;
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
@@ -94,7 +93,7 @@
     isNormalUser = true;
     shell = pkgs.fish; # Set the default shell to Fish.
     home = "/home/angel";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ];
     # Packages on home.nix
   };
 
