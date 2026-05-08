@@ -37,12 +37,14 @@
 
     # Games
     steam
+    gamescope
     prismlauncher # Minecraft launcher.
 
     # Development
     termius # SSH client with GUI
     python3
     bun
+    usbutils # For lsusb, etc.
 
     # Fonts
     nerd-fonts.jetbrains-mono
