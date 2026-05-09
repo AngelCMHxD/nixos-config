@@ -34,6 +34,7 @@
     ente-auth # 2FA
     onlyoffice-desktopeditors # Office suite
     nautilus # File manager
+    pwvucontrol # Audio control
 
     # Games
     steam
