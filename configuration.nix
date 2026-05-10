@@ -79,7 +79,7 @@
   # WM and display settings.
   services.logind.settings.Login.HandlePowerKey = "ignore"; # Disable power key, handle it on the WM.
   services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
-  services.displayManager.plasma-login-manager.enable = true;
+  services.displayManager.ly.enable = true;
   programs.niri.enable = true;
 
   # Use pipewire for audio.
