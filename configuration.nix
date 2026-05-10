@@ -18,6 +18,7 @@
   boot.initrd.systemd.tpm2.enable = true;
 
   # Use the Limine boot loader.
+  catppuccin.limine.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.limine = {
     enable = true;
