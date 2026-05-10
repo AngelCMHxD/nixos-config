@@ -24,6 +24,11 @@
   services.wl-clip-persist.enable = true;
   services.cliphist.enable = true;
 
+  # Catppuccin themes for some apps
+  catppuccin.bat.enable = true;
+  catppuccin.lsd.enable = true;
+  catppuccin.btop.enable = true;
+
   # Packages installed in the user profile (overrides system profile).
   home.packages = with pkgs; [
     wl-clipboard # For clipboard management.
@@ -45,6 +50,9 @@
     python3
     bun
     usbutils # For lsusb, etc.
+    bat # Replacement for cat with syntax highlighting.
+    lsd # Replacement for ls with icons and more features.
+    btop # process viewer
 
     # Fonts
     nerd-fonts.jetbrains-mono
