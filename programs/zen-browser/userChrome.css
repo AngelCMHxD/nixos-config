@@ -127,4 +127,58 @@
   #zen-appcontent-navbar-container {
     background-color: #1e2030 !important;
   }
+
+  /* This adds the background and text color to the menupopup and panel elements */
+  /* Previously, some things like dropdowns had dark text, making them hard to read */
+
+  menupopup,
+  panel,
+  .menupopup-arrowscrollbox,
+  .panel-arrowcontent,
+  .panel-subview-body {
+    background-color: #24273a !important;
+    color: #cad3f5 !important;
+  }
+
+  menu,
+  menuitem,
+  .menuitem-iconic,
+  .subviewbutton,
+  .toolbaritem-combined-buttons,
+  .identity-popup-button,
+  .panel-subview-body button,
+  .panel-subview-body label,
+  .panel-subview-body description {
+    color: #cad3f5 !important;
+  }
+
+  menu[_moz-menuactive="true"],
+  menuitem[_moz-menuactive="true"],
+  .subviewbutton:hover,
+  .identity-popup-button:hover,
+  .panel-subview-body button:hover {
+    background-color: #363a4f !important;
+    color: #cad3f5 !important;
+  }
+
+  menulist,
+  select,
+  .urlbarView-row,
+  .urlbarView-results,
+  .urlbarView-no-wrap,
+  .urlbarView-button {
+    background-color: #363a4f !important;
+    color: #cad3f5 !important;
+  }
+
+  menulist:hover,
+  select:hover {
+    border-color: #c6a0f6 !important;
+  }
+
+  menulist > menupopup,
+  select > menupopup {
+    background-color: #24273a !important;
+    color: #cad3f5 !important;
+  }
 }
