@@ -39,7 +39,6 @@
     # Games
     steam
     gamescope
-    prismlauncher # Minecraft launcher.
 
     # Development
     termius # SSH client with GUI
