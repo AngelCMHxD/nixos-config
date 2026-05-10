@@ -16,22 +16,7 @@
 
       plugins = {
 
-        questify = {
-          enable = true;
-
-          questRewardIncludeCollectibles = false;
-          questRewardIncludeInGame = false;
-          questRewardIncludeRewardCode = false;
-
-          completeAchievementQuestsInBackground = true;
-          completeGameQuestsInBackground = true;
-          completeVideoQuestsInBackground = true;
-          completeVideoQuestsQuicker = true;
-
-          disableQuestsPageSponsoredBanner = true;
-          disableQuestsDiscoveryTab = true;
-          disableQuestsDirectMessagesTab = true;
-        };
+        questify.enable = true;
 
         # Youtube patches
         fixYoutubeEmbeds.enable = true;
