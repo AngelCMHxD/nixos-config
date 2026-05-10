@@ -13,6 +13,8 @@
     accept-flake-config = true;
   };
 
+  catppuccin.tty.enable = true; # Enable Catppuccin TTY theme.
+
   # Use systemd for the init system and enable TPM2 support for auto-unlock of the LUKS volume.
   boot.initrd.systemd.enable = true;
   boot.initrd.systemd.tpm2.enable = true;
