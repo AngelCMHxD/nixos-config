@@ -17,14 +17,14 @@
   home.shell.enableFishIntegration = true;
   home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
   home.file.".face".source = ./assets/profile-icon.png;
-  catppuccin.accent = "mauve";
-  catppuccin.flavor = "macchiato";
 
   # Clipboard manager.
   services.wl-clip-persist.enable = true;
   services.cliphist.enable = true;
 
-  # Catppuccin themes for some apps
+  # Theming
+  catppuccin.accent = "mauve";
+  catppuccin.flavor = "macchiato";
   catppuccin.bat.enable = true;
   catppuccin.lsd.enable = true;
   catppuccin.btop.enable = true;
