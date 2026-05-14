@@ -40,6 +40,7 @@
     onlyoffice-desktopeditors # Office suite
     nautilus # File manager
     pwvucontrol # Audio control
+    obsidian # Note-taking app
 
     # Games
     steam
