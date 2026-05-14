@@ -47,6 +47,8 @@
     gamescope
 
     # Development
+    jetbrains.idea
+    jetbrains.rider
     termius # SSH client with GUI
     python3
     bun
