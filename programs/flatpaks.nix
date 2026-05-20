@@ -4,10 +4,11 @@
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
   ];
 
-  services.flatpak.update.auto.enable = true;
+  services.flatpak.update.onActivation = true;
   services.flatpak.uninstallUnmanaged = true;
 
   services.flatpak.packages = [
     "org.vinegarhq.Sober"
+    "sh.ppy.osu"
   ];
 }
