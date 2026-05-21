@@ -17,6 +17,12 @@
   boot.initrd.luks.devices."root" = {
     device = "/dev/disk/by-partlabel/crypt-root";
     crypttabExtraOpts = [ "tpm2-device=auto" ];
+
+    # Kernel parameters for SSDs.
+    # Info from https://wiki.archlinux.org/title/Dm-crypt/Specialties
+    # Options found at https://nixos.org/manual/nixos/stable/options#opt-boot.initrd.luks.devices
+    bypassWorkqueues = true; # Improves performance
+    allowDiscards = true; # Allows TRIM, improves lifespan
   };
 
   fileSystems."/" = {
