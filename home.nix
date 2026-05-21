@@ -108,13 +108,13 @@
 
     platformTheme.name = "qtct";
     style = {
-      package = with pkgs; [ darkly-qt5 darkly ];
+      package = with pkgs; [ darkly ];
     };
 
     qt5ctSettings = {
-      Appearance = {
-        style = "Darkly";
-      };
+      # Appearance = {
+      #   style = "Darkly";
+      # };
       Fonts = {
         fixed = "\"JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0,Regular\"";
         general = "\"Inter,10,-1,5,50,0,0,0,0,0,Regular\"";
