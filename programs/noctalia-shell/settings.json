@@ -118,20 +118,20 @@
           "id": "plugin:privacy-indicator"
         },
         {
-          "compactMode": false,
+          "compactMode": true,
           "hideMode": "hidden",
           "hideWhenIdle": false,
           "id": "MediaMini",
-          "maxWidth": 145,
+          "maxWidth": 500,
           "panelShowAlbumArt": true,
           "scrollingMode": "hover",
           "showAlbumArt": true,
-          "showArtistFirst": true,
+          "showArtistFirst": false,
           "showProgressRing": true,
-          "showVisualizer": false,
+          "showVisualizer": true,
           "textColor": "none",
           "useFixedWidth": false,
-          "visualizerType": "linear"
+          "visualizerType": "mirrored"
         },
         {
           "blacklist": [],
