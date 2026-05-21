@@ -28,6 +28,7 @@
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
+    options = [ "compress-force=zstd:2" ];
   };
 
   fileSystems."/boot" = {
