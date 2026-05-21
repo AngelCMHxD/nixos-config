@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 
@@ -83,6 +84,8 @@
   # GTK theming.
   gtk = {
     enable = true;
+
+    gtk4.theme = config.gtk.theme;
     theme = {
       name = "Colloid-Purple-Dark-Catppuccin";
       package = pkgs.colloid-gtk-theme.override {
