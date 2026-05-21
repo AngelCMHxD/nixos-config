@@ -52,6 +52,7 @@
     termius # SSH client with GUI
     python3
     bun
+    deno
     usbutils # For lsusb, etc.
     bat # Replacement for cat with syntax highlighting.
     lsd # Replacement for ls with icons and more features.
