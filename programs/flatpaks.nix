@@ -9,6 +9,5 @@
 
   services.flatpak.packages = [
     "org.vinegarhq.Sober"
-    "sh.ppy.osu"
   ];
 }

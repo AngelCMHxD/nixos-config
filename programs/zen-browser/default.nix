@@ -27,10 +27,11 @@
         "addon@darkreader.org" = "darkreader";
         "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}" = "catppuccin-web-file-icons";
         "firefox-extension@steamdb.info" = "steam-database";
+	"{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = "styl-us"; # Can't be reproducible or at least it's really difficult to do so.
       };
     };
 
-        profiles.default = {
+    profiles.default = {
       isDefault = true;
       settings = {
         "zen.view.compact.enable-at-startup" = true;
@@ -42,6 +43,7 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
 
+      spacesForce = true;
       spaces = {
         "Personal" = {
           id = "c6de089c-410d-4206-961d-ab11f988d40a";
