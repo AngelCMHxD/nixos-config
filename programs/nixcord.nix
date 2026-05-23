@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.nixcord.homeModules.nixcord
@@ -33,6 +33,35 @@
         noDevtoolsWarning.enable = true;
         gameActivityToggle.enable = true;
       };
+    };
+  };
+
+  # NixOS version of https://github.com/Arcitec/discord-flatpak-rpc-bridge
+  # So the native Discord client can communicate with Flatpak apps
+  systemd.user.sockets.discord-flatpak-rpc-bridge = {
+    Unit = {
+      Description = "Discord Native-to-Flatpak RPC Bridge Socket";
+    };
+    Socket = {
+      Priority = 6;
+      ListenStream = "%t/app/com.discordapp.Discord/discord-ipc-0";
+    };
+    Install = {
+      WantedBy = [ "sockets.target" ];
+    };
+  };
+
+  systemd.user.services.discord-flatpak-rpc-bridge = {
+    Unit = {
+      Description = "Discord Native-to-Flatpak RPC Bridge Service";
+      Requires = [ "discord-flatpak-rpc-bridge.socket" ];
+      After = [ "discord-flatpak-rpc-bridge.socket" ];
+    };
+    Service = {
+      Type = "notify";
+      ExecStart = "${pkgs.systemd}/lib/systemd/systemd-socket-proxyd %t/discord-ipc-0";
+      PrivateTmp = true;
+      PrivateNetwork = true;
     };
   };
 }
