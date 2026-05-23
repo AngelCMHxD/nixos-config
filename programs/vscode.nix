@@ -20,6 +20,7 @@
         # Misc
         "eamodio.gitlens"
         "janisdd.vscode-edit-csv"
+        "tomoki1207.pdf"
         "icrawl.discord-vscode"
         "github.copilot-chat"
         "shd101wyy.markdown-preview-enhanced"
