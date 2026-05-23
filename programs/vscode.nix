@@ -41,6 +41,7 @@
         };
 
         # Formatter
+        "extensions.autoUpdate" = false;
         "editor.defaultFormatter" = "biomejs.biome";
         "biome.requireConfiguration" = true;
         "biome.suggestInstallingGlobally" = false;
