@@ -7,19 +7,15 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     catppuccin.url = "github:catppuccin/nix";
+    noctalia.url = "github:noctalia-dev/noctalia-shell/v5";
 
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,8 +38,8 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        { 
-          nixpkgs.config.allowUnfree = true; 
+        {
+          nixpkgs.config.allowUnfree = true;
           nixpkgs.overlays = [ inputs.nix4vscode.overlays.default ];
         }
         ./configuration.nix
@@ -60,4 +56,3 @@
     };
   };
 }
-
