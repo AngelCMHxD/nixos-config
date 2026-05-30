@@ -32,6 +32,14 @@
   catppuccin.lsd.enable = true;
   catppuccin.btop.enable = true;
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.catppuccin-cursors.macchiatoMauve;
+    name = "catppuccin-macchiato-mauve-cursors";
+    size = 32;
+  };
+
   # Packages installed in the user profile (overrides system profile).
   home.packages = with pkgs; [
     wl-clipboard # For clipboard management.
