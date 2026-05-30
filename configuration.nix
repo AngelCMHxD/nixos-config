@@ -13,6 +13,8 @@
     accept-flake-config = true;
   };
 
+  catppuccin.enable = true;
+  catppuccin.autoEnable = false;
   catppuccin.tty.enable = true; # Enable Catppuccin TTY theme.
 
   # Use systemd for the init system and enable TPM2 support for auto-unlock of the LUKS volume.
@@ -25,7 +27,7 @@
   boot.loader.limine = {
     enable = true;
     maxGenerations = 5;
-    
+
     style = {
       # Disable NixOS background.
       wallpapers = [];

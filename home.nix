@@ -24,6 +24,8 @@
   services.cliphist.enable = true;
 
   # Theming
+  catppuccin.enable = true;
+  catppuccin.autoEnable = false;
   catppuccin.accent = "mauve";
   catppuccin.flavor = "macchiato";
   catppuccin.bat.enable = true;
