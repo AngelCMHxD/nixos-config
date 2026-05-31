@@ -10,6 +10,17 @@
             xkb_rules_layout = "latam";
             trackpad_natural_scrolling = 1;
 
+            border_radius = 3;
+            rootcolor = "0xc6a0f6ff";
+            maximizescreencolor = "0xc6a0f6ff";
+            focuscolor = "0xc6a0f6ff";
+            bordercolor = "0x6e738dff";
+
+            gappih = 4;
+            gappiv = 4;
+            gappoh = 4;
+            gappov = 4;
+
             exec-once = [
                 "noctalia"
            	];
@@ -40,7 +51,25 @@
                 "SUPER,v,spawn,noctalia msg panel-toggle clipboard"
                 "SUPER+CTRL+SHIFT,n,spawn,pkill noctalia ; noctalia -d"
                 "NONE,XF86PowerOff,spawn,noctalia msg panel-toggle session"
+                "NONE,Print,spawn,noctalia msg screenshot-region"
+                "SUPER+SHIFT,s,spawn,noctalia msg screenshot-region"
+                "SHIFT,Print,spawn,noctalia msg screenshot-fullscreen"
 
+                # Switch window focus
+                "SUPER,Left,focusdir,left"
+                "SUPER,Right,focusdir,right"
+                "SUPER,Up,focusdir,up"
+                "SUPER,Down,focusdir,down"
+
+                # Swap windows
+                "SUPER+SHIFT,Up,exchange_client,up"
+                "SUPER+SHIFT,Down,exchange_client,down"
+                "SUPER+SHIFT,Left,exchange_client,left"
+                "SUPER+SHIFT,Right,exchange_client,right"
+
+                # Switch tags with arrow keys
+                "CTRL+SUPER,Left,viewtoleft,left"
+                "CTRL+SUPER,Right,viewtoright,right"
 
                 # Switch to tag
                 "SUPER,1,view,1,0"
