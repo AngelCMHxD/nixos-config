@@ -1,12 +1,13 @@
 # Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
-    imports =
-        [
+    imports = [
         ./ichigo-hardware.nix
-        ];
+        inputs.catppuccin.nixosModules.catppuccin
+        inputs.mangowm.nixosModules.mango
+    ];
 
     nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
@@ -80,9 +81,9 @@
 
     # WM and display settings.
     services.logind.settings.Login.HandlePowerKey = "ignore"; # Disable power key, handle it on the WM.
-    services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
+    services.xserver.enable = false; # Mango uses xwayland-satellite, so no need for xserver.
     services.displayManager.ly.enable = true;
-    programs.niri.enable = true;
+    programs.mango.enable = true;
 
     # Use pipewire for audio.
     services.pipewire = {
@@ -107,7 +108,12 @@
     # List of packages installed in system profile.
     # Use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
-        xwayland-satellite # For running X11 applications in niri.
+        xwayland-satellite # For running X11 applications on Mango.
+	dconf
+        xdg-desktop-portal
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+
         sbctl # For managing secure boot keys.
         nil # Nix LSP
         nixd # Nix LSP
@@ -146,5 +152,4 @@
     # Do NOT change this option unless you know exactly what you are doing.
     # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
     system.stateVersion = "25.11"; # This should match what is in home.nix's home.stateVersion.
-
 }

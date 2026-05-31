@@ -9,6 +9,11 @@
         catppuccin.url = "github:catppuccin/nix";
         noctalia.url = "github:noctalia-dev/noctalia-shell/v5";
 
+        mangowm = {
+            url = "github:mangowm/mango";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         nix4vscode = {
             url = "github:nix-community/nix4vscode";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -43,7 +48,6 @@
                     nixpkgs.overlays = [ inputs.nix4vscode.overlays.default ];
                 }
                 ./configuration.nix
-                catppuccin.nixosModules.catppuccin
                 home-manager.nixosModules.home-manager
                 {
                     home-manager.useGlobalPkgs = true;
