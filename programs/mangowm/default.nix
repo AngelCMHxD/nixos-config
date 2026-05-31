@@ -11,8 +11,9 @@
             trackpad_natural_scrolling = 1;
             sloppyfocus = 0;
             numlockon = 1;
+            border_radius = 8;
 
-            border_radius = 3;
+            borderpx = 4;
             rootcolor = "0xc6a0f6ff";
             maximizescreencolor = "0xc6a0f6ff";
             focuscolor = "0xc6a0f6ff";
