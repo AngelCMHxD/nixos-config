@@ -131,8 +131,10 @@
 
     # SSH settings.
     programs.ssh.startAgent = false;
+    services.gnome.gcr-ssh-agent.enable = true;
+    environment.sessionVariables.SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/gcr/ssh";
     services.gnome.gnome-keyring.enable = true;
-    security.pam.services.sddm.enableGnomeKeyring = true;
+    security.pam.services.ly.enableGnomeKeyring = true;
     services.dbus.enable = true;
     programs.gnupg.agent = {
         enable = true;
