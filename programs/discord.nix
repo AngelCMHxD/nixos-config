@@ -15,7 +15,19 @@
             useQuickCss = true;
 
             plugins = {
-                questify.enable = true;
+                questify = {
+                    enable = true;
+                    allowChangingDangerousSettings = true;
+
+                    autoCompleteQuestTypes = {
+                        PLAY_ON_DESKTOP = true;
+                        PLAY_ON_XBOX = true;
+                        PLAY_ON_PLAYSTATION = true;
+                        PLAY_ACTIVITY = true;
+                        WATCH_VIDEO = true;
+                        ACHIEVEMENT_IN_ACTIVITY = true;
+                    };
+                };
 
                 # Youtube patches
                 fixYoutubeEmbeds.enable = true;
