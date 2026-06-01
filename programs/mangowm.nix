@@ -69,6 +69,11 @@
                 "NONE,Print,spawn,noctalia msg screenshot-region"
                 "SUPER+SHIFT,s,spawn,noctalia msg screenshot-region"
                 "SHIFT,Print,spawn,noctalia msg screenshot-fullscreen"
+                "NONE,XF86AudioRaiseVolume,spawn,noctalia msg volume-up"
+                "NONE,XF86AudioLowerVolume,spawn,noctalia msg volume-down"
+                "NONE,XF86AudioMute,spawn,noctalia msg volume-mute"
+                "NONE,XF86MonBrightnessUp,spawn,noctalia msg brightness-up"
+                "NONE,XF86MonBrightnessDown,spawn,noctalia msg brightness-down"
 
                 # Resize windows
                 "SUPER,minus,resizewin,-10,0"
