@@ -14,6 +14,18 @@
         accept-flake-config = true;
     };
 
+    system.activationScripts.diff = {
+        supportsDryActivation = true;
+        text = ''
+            if [ -e /run/current-system ]; then
+                echo
+                echo -e "\033[0;32mPackage diffs:\033[0m"
+                ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
+                echo
+            fi
+        '';
+    };
+
     catppuccin.enable = true;
     catppuccin.autoEnable = false;
     catppuccin.tty.enable = true; # Enable Catppuccin TTY theme.
