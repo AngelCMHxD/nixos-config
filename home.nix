@@ -35,9 +35,9 @@
     home.pointerCursor = {
         gtk.enable = true;
         x11.enable = true;
-        package = pkgs.catppuccin-cursors.macchiatoMauve;
-        name = "catppuccin-macchiato-mauve-cursors";
-        size = 32;
+        package = pkgs.bibata-cursors;
+        name = "Bibata-Modern-Classic";
+        size = 20;
     };
 
     # Packages installed in the user profile (overrides system profile).
