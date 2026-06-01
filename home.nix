@@ -40,6 +40,11 @@
         size = 20;
     };
 
+    home.sessionVariables = {
+        XCURSOR_SIZE = "20";
+        XCURSOR_THEME = "Bibata-Modern-Classic";
+    };
+
     # Packages installed in the user profile (overrides system profile).
     home.packages = with pkgs; [
         wl-clipboard # For clipboard management.
