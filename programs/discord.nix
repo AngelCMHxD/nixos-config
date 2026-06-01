@@ -29,6 +29,20 @@
                     };
                 };
 
+                loadingQuotes = {
+                    enable = true;
+                    additionalQuotes = builtins.concatStringsSep "|" [
+                        ":P"
+                        ";D"
+                        "Loading... maybe?"
+                    ];
+                };
+
+                voiceRejoin = {
+                    enable = true;
+                    rejoinTimeout = 60.0;
+                };
+
                 # Youtube patches
                 fixYoutubeEmbeds.enable = true;
                 youtubeAdblock.enable = true;
@@ -37,8 +51,22 @@
                 # Spotify
                 fixSpotifyEmbeds.enable = true;
                 spotifyCrack.enable = true;
-                spotifyActivityToggle.enable = true;
 
+                betterInvites.enable = true;
+                betterGifPicker.enable = true;
+                bypassPinPrompt.enable = true;
+                ClearURLs.enable = true;
+                fixImagesQuality.enable = true;
+                friendsSince.enable = true;
+                ghosted.enable = true;
+                mentionAvatars.enable = true;
+                homeTyping.enable = true;
+                micLoopbackTester.enable = true;
+                noF1.enable = true;
+                noOnboardingDelay.enable = true;
+                OnePingPerDM.enable = true;
+                roleColorEverywhere.enable = true;
+                typingIndicator.enable = true;
                 consoleJanitor.enable = true;
                 experiments.enable = true;
                 noDevtoolsWarning.enable = true;
