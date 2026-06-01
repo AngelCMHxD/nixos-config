@@ -19,6 +19,19 @@
                 };
             };
 
+
+            wallpaper = {
+                enabled = true;
+                transition_on_startup = true;
+                directory = "/etc/nixos/assets/wallpapers";
+                default.path = "/etc/nixos/assets/wallpapers/catppuccin.png";
+
+                automation = {
+                    enabled = true;
+                    interval_minutes = 1;
+                };
+            };
+
             theme = {
                 builtin = "Catppuccin";
             };
