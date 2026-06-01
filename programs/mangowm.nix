@@ -15,7 +15,7 @@
 
             border_radius = 8;
             borderpx = 4;
-            rootcolor = "0xc6a0f6ff";
+            rootcolor = "0x6e738dff";
             maximizescreencolor = "0xc6a0f6ff";
             focuscolor = "0xc6a0f6ff";
             bordercolor = "0x6e738dff";
