@@ -1,4 +1,4 @@
-# NixOS Configuration
+# Angel's NixOS Configs
 This is my *mostly*<sup>1</sup> reproducible NixOS setup.
 
 <br><br>
