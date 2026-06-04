@@ -83,6 +83,10 @@
     hardware.bluetooth.enable = true;
     hardware.steam-hardware.enable = true;
 
+    # Games
+    programs.gamescope.enable = true;
+    programs.gamemode.enable = true;
+
     # Power management settings.
     services.tlp.enable = false;
     services.tuned.enable = true;

@@ -61,6 +61,12 @@
         # Games
         steam
         gamescope
+        (heroic.override {
+            extraPkgs = pkgs': with pkgs'; [
+                gamescope
+                gamemode
+            ];
+        })
 
         # Development
         jetbrains.idea
