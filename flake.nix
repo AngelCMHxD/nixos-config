@@ -3,6 +3,10 @@
         # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+        # Pinned nixpkgs for the 7.1-rc2 kernel
+        # Latest rc kernel has a bug with bluetooth
+        nixpkgs-kernel.url = "github:NixOS/nixpkgs/b3da656039dc7a6240f27b2ef8cc6a3ef3bccae7";
+
         nixcord.url = "github:FlameFlag/nixcord/dev";
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
         nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
@@ -38,7 +42,7 @@
         extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
     };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, ... }: {
+    outputs = inputs@{ self, nixpkgs, nixpkgs-kernel, home-manager, catppuccin, ... }: {
         nixosConfigurations.ichigo = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
