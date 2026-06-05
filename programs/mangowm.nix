@@ -65,7 +65,7 @@
 
                 # Noctalia
                 "SUPER,r,spawn,noctalia msg panel-toggle launcher"
-                "SUPER,l,spawn,noctalia msg screen-lock"
+                "SUPER,l,spawn,noctalia msg session lock"
                 "SUPER+CTRL+SHIFT,s,spawn,noctalia msg settings-toggle"
                 "SUPER+CTRL+SHIFT,w,spawn,noctalia msg panel-toggle wallpaper"
                 "SUPER,v,spawn,noctalia msg panel-toggle clipboard"
