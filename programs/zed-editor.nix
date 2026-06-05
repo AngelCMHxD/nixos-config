@@ -7,6 +7,7 @@
 
         extensions = [
             "discord-presence"
+            "wakatime"
         ];
 
         userSettings = {
