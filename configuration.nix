@@ -103,9 +103,13 @@
     programs.mango.enable = true;
 
     # Use pipewire for audio.
+    security.rtkit.enable = true;
     services.pipewire = {
         enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
         pulse.enable = true;
+        jack.enable = true;
     };
 
     # Enable CUPS to print documents.
