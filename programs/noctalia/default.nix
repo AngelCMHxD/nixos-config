@@ -19,6 +19,8 @@
                 };
             };
 
+            notifications.monitors = [ "eDP-1" ];
+            osd.monitors = [ "eDP-1" ];
 
             wallpaper = {
                 enabled = true;
@@ -69,6 +71,10 @@
                 default = {
                     position = "top";
                     enabled = true;
+                    monitor."HDMI-A-1" = {
+                        match = "HDMI-A-1";
+                        enabled = false;
+                    };
                     auto_hide = false;
                     reserve_space = true;
 

@@ -35,6 +35,11 @@
                 "noctalia"
            	];
 
+            monitorrule = [
+                "name:eDP-1,width:1920,height:1080,refresh:60,x:0,y:0"
+                "name:HDMI-A-1,width:1920,height:1080,refresh:60,x:0,y:0"
+            ];
+
             tagrule = [
                 "id:1,layout_name:scroller"
                 "id:2,layout_name:scroller"
