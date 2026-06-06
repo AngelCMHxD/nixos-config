@@ -8,6 +8,7 @@
         extensions = [
             "discord-presence"
             "wakatime"
+            "deno"
         ];
 
         userSettings = {
