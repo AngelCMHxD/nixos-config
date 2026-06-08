@@ -7,7 +7,7 @@
 
         extensions = [
             "discord-presence"
-            "wakatime"
+            "hackatime"
             "deno"
         ];
 
