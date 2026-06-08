@@ -55,7 +55,7 @@
                 betterInvites.enable = true;
                 betterGifPicker.enable = true;
                 bypassPinPrompt.enable = true;
-                ClearURLs.enable = true;
+                clearUrls.enable = true;
                 fixImagesQuality.enable = true;
                 friendsSince.enable = true;
                 ghosted.enable = true;
@@ -64,7 +64,7 @@
                 micLoopbackTester.enable = true;
                 noF1.enable = true;
                 noOnboardingDelay.enable = true;
-                OnePingPerDM.enable = true;
+                onePingPerDm.enable = true;
                 roleColorEverywhere.enable = true;
                 typingIndicator.enable = true;
                 consoleJanitor.enable = true;
