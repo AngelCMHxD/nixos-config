@@ -69,8 +69,7 @@
         })
 
         # Development
-        jetbrains.idea
-        jetbrains.rider
+        jetbrains-toolbox
         termius # SSH client with GUI
         python3
         bun
