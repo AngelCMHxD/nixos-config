@@ -130,6 +130,7 @@
     # Use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
         xwayland-satellite # For running X11 applications on Mango.
+	devenv
 	dconf
         xdg-desktop-portal
         xdg-desktop-portal-wlr
