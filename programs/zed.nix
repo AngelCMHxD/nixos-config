@@ -4,6 +4,7 @@
     catppuccin.zed.icons.enable = true;
     programs.zed-editor = {
         enable = true;
+        defaultEditor = true;
 
         extensions = [
             "discord-presence"
@@ -11,6 +12,7 @@
             "deno"
         ];
 
+        mutableUserSettings = false;
         userSettings = {
             cli_default_open_behavior = "new_window";
             project_panel = {
