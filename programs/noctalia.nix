@@ -55,7 +55,7 @@
                     enabled = true;
                     timeout = 600;
                     command = "noctalia:dpms-off";
-                    resume_command = "noctalia:dpms-on";
+                    resume_command = "noctalia msg dpms-on";
                 };
             };
 
