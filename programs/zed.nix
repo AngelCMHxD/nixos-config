@@ -43,6 +43,7 @@
                     initialization_options = {
                         details = "Working on a {language:u} file";
                         state = ":P";
+			idle.timeout = 900;
                     };
                 };
             };
