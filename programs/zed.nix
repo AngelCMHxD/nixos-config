@@ -9,6 +9,7 @@
         extensions = [
             "discord-presence"
             "hackatime"
+	    "biome"
             "deno"
         ];
 
