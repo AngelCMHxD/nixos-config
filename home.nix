@@ -61,6 +61,7 @@
         # Games
         steam
         gamescope
+        r2modman
         (heroic.override {
             extraPkgs = pkgs': with pkgs'; [
                 gamescope
@@ -74,6 +75,8 @@
         python3
         bun
         deno
+        bruno
+
         usbutils # For lsusb, etc.
         bat # Replacement for cat with syntax highlighting.
         lsd # Replacement for ls with icons and more features.
