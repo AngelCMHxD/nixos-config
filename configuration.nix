@@ -71,9 +71,8 @@
     services.envfs.enable = true;
     programs.nix-ld.enable = true;
 
-    # Pinned nixpkgs for the 7.1-rc2 kernel
-    # Latest rc kernel has a bug with bluetooth
-    boot.kernelPackages = inputs.nixpkgs-kernel.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages_testing;
+    # Latest rc kernel
+    boot.kernelPackages = pkgs.linuxPackages_testing;
 
     # Define hostname.
     networking.hostName = "ichigo";
