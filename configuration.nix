@@ -71,8 +71,8 @@
     services.envfs.enable = true;
     programs.nix-ld.enable = true;
 
-    # Latest rc kernel
-    boot.kernelPackages = pkgs.linuxPackages_testing;
+    # Latest kernel
+    boot.kernelPackages = pkgs.linuxPackages_latest;
 
     # Define hostname.
     networking.hostName = "ichigo";
