@@ -11,6 +11,7 @@
             shell = {
                 polkit_agent = true;
                 password_style = "random";
+                font_family = "Poppins";
                 avatar_path = "/etc/nixos/assets/profile-icon.png";
 
                 screenshot = {
@@ -22,6 +23,7 @@
             notifications.monitors = [ "eDP-1" ];
             osd.monitors = [ "eDP-1" ];
 
+            backdrop.enabled = true;
             wallpaper = {
                 enabled = true;
                 transition_on_startup = true;
@@ -30,7 +32,7 @@
 
                 automation = {
                     enabled = true;
-                    interval_minutes = 1;
+                    interval_seconds = 30;
                 };
             };
 
@@ -38,9 +40,19 @@
                 builtin = "Catppuccin";
             };
 
+            calendar = {
+                enabled = true;
+                refresh_minutes = 15;
+
+                account.google_personal = {
+                    type = "google";
+                    name = "Google Personal";
+                };
+            };
+
+            location.auto_locate = true;
             weather = {
                 enabled = true;
-                auto_locate = true;
                 refresh_minutes = 15;
             };
 
@@ -48,7 +60,7 @@
                 lock = {
                     enabled = true;
                     timeout = 600;
-                    command = "noctalia:screen-lock";
+                    command = "noctalia:session lock";
                 };
 
                 screen-off = {
@@ -61,7 +73,7 @@
 
             widget = {
                 clock = {
-                    format = "{:%H:%M} - {:%d} {:%b} {:%Y}";
+                    format = "{:%H:%M} {:%p} - {:%d} {:%b} {:%Y}";
                 };
             };
 

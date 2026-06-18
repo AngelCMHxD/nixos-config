@@ -63,6 +63,16 @@
                 };
             };
 
+            layer-rules = [
+                {
+                    matches = [{
+                        namespace = "^noctalia-backdrop";
+                    }];
+
+                    place-within-backdrop = true;
+                }
+            ];
+
             window-rules = [
                 {
                     clip-to-geometry = true;
