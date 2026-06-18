@@ -7,8 +7,13 @@
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
         nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
         catppuccin.url = "github:catppuccin/nix";
-        noctalia.url = "github:noctalia-dev/noctalia";
         niri.url = "github:sodiboo/niri-flake";
+        noctalia.url = "github:noctalia-dev/noctalia";
+
+        noctalia-greeter = {
+            url = "github:noctalia-dev/noctalia-greeter";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         nix4vscode = {
             url = "github:nix-community/nix4vscode";

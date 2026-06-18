@@ -5,6 +5,7 @@
 {
     imports = [
         ./ichigo-hardware.nix
+        inputs.noctalia-greeter.nixosModules.default
         inputs.catppuccin.nixosModules.catppuccin
         inputs.niri.nixosModules.niri
     ];
@@ -100,8 +101,27 @@
     # WM and display settings.
     services.logind.settings.Login.HandlePowerKey = "ignore"; # Disable power key, handle it on the WM.
     services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
-    services.displayManager.ly.enable = true;
     programs.niri.enable = true;
+    programs.noctalia-greeter = {
+        enable = true;
+        package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
+        settings.cursor = {
+            theme = "Bibata-Modern-Classic";
+            size = 20;
+            package = pkgs.bibata-cursors;
+        };
+    };
+
+    systemd.tmpfiles.rules = [
+        "L+ /var/lib/noctalia-greeter/greeter.conf - - - - ${pkgs.writeText "greeter.conf" ''
+            default_session=Niri
+            session=Niri
+            default_user=angel
+            scale=1
+            scheme=Catppuccin
+        ''}"
+    ];
 
     # Use pipewire for audio.
     security.rtkit.enable = true;
@@ -158,7 +178,7 @@
     services.gnome.gcr-ssh-agent.enable = true;
     environment.sessionVariables.SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/gcr/ssh";
     services.gnome.gnome-keyring.enable = true;
-    security.pam.services.ly.enableGnomeKeyring = true;
+    security.pam.services.greetd.enableGnomeKeyring = true;
     services.dbus.enable = true;
     programs.gnupg.agent = {
         enable = true;
