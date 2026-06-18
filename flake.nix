@@ -8,11 +8,7 @@
         nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
         catppuccin.url = "github:catppuccin/nix";
         noctalia.url = "github:noctalia-dev/noctalia";
-
-        mangowm = {
-            url = "github:mangowm/mango";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        niri.url = "github:sodiboo/niri-flake";
 
         nix4vscode = {
             url = "github:nix-community/nix4vscode";
@@ -45,7 +41,7 @@
             modules = [
                 {
                     nixpkgs.config.allowUnfree = true;
-                    nixpkgs.overlays = [ inputs.nix4vscode.overlays.default ];
+                    nixpkgs.overlays = [ inputs.nix4vscode.overlays.default inputs.niri.overlays.niri ];
                 }
                 ./configuration.nix
                 home-manager.nixosModules.home-manager

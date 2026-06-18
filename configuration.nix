@@ -6,8 +6,10 @@
     imports = [
         ./ichigo-hardware.nix
         inputs.catppuccin.nixosModules.catppuccin
-        inputs.mangowm.nixosModules.mango
+        inputs.niri.nixosModules.niri
     ];
+
+    systemd.user.services.niri-flake-polkit.enable = false;
 
     nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
@@ -97,9 +99,9 @@
 
     # WM and display settings.
     services.logind.settings.Login.HandlePowerKey = "ignore"; # Disable power key, handle it on the WM.
-    services.xserver.enable = false; # Mango uses xwayland-satellite, so no need for xserver.
+    services.xserver.enable = false; # Niri uses xwayland-satellite, so no need for xserver.
     services.displayManager.ly.enable = true;
-    programs.mango.enable = true;
+    programs.niri.enable = true;
 
     # Use pipewire for audio.
     security.rtkit.enable = true;
@@ -128,9 +130,9 @@
     # List of packages installed in system profile.
     # Use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
-        xwayland-satellite # For running X11 applications on Mango.
-	devenv
-	dconf
+        xwayland-satellite # For running X11 applications on Niri.
+        devenv
+        dconf
         xdg-desktop-portal
         xdg-desktop-portal-wlr
         xdg-desktop-portal-gtk
@@ -145,6 +147,7 @@
         wget
         jq
         unzip
+        psmisc
     ];
 
     # Flatpak support.
