@@ -9,7 +9,7 @@
         extensions = [
             "discord-presence"
             "hackatime"
-	    "biome"
+            "biome"
             "deno"
         ];
 
@@ -44,7 +44,7 @@
                     initialization_options = {
                         details = "Working on a {language:u} file";
                         state = ":P";
-			idle.timeout = 900;
+                        idle.timeout = 900;
                     };
                 };
             };

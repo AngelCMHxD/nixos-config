@@ -16,7 +16,7 @@
                 "oven.bun-vscode"
                 "ms-python.python"
                 "ms-python.vscode-pylance"
-				"denoland.vscode-deno"
+                "denoland.vscode-deno"
 
                 # Misc
                 "eamodio.gitlens"

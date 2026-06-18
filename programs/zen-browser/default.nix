@@ -27,7 +27,7 @@
                 "addon@darkreader.org" = "darkreader";
                 "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}" = "catppuccin-web-file-icons";
                 "firefox-extension@steamdb.info" = "steam-database";
-               	"{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = "styl-us"; # Can't be reproducible or at least it's really difficult to do so.
+                "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}" = "styl-us"; # Can't be reproducible or at least it's really difficult to do so.
             };
         };
 
