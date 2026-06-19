@@ -66,6 +66,12 @@
                 };
             };
 
+            blur = {
+                passes = 1;
+                noise = 0.0;
+                offset = 1.0;
+            };
+
             layer-rules = [
                 {
                     matches = [{
@@ -78,6 +84,9 @@
                     matches = [
                         {
                             namespace = "vicinae";
+                        }
+                        {
+                            namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$";
                         }
                     ];
                     background-effect = {
