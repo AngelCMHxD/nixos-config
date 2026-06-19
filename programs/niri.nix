@@ -3,7 +3,10 @@
     programs.niri = {
         package = pkgs.niri-unstable;
         settings = {
-            hotkey-overlay.skip-at-startup = true;
+            hotkey-overlay = {
+                skip-at-startup = true;
+                hide-not-bound = true;
+            };
             prefer-no-csd = true;
 
             input = {
@@ -71,6 +74,17 @@
 
                     place-within-backdrop = true;
                 }
+                {
+                    matches = [
+                        {
+                            namespace = "vicinae";
+                        }
+                    ];
+                    background-effect = {
+                        blur = true;
+                        xray = false;
+                    };
+                }
             ];
 
             window-rules = [
@@ -109,10 +123,20 @@
 
                     default-column-width.proportion = 1.0;
                 }
+                {
+                    matches = [{
+                        app-id = "vicinae";
+                    }];
+                    background-effect = {
+                        blur = true;
+                        xray = false;
+                    };
+                }
             ];
 
             spawn-at-startup = [
                 { sh = "noctalia -d"; }
+                { sh = "vicinae server"; }
             ];
 
             binds = {
@@ -131,6 +155,12 @@
                 "Mod+Backspace" = {
                     action.close-window = {};
                     hotkey-overlay.title = "Close Window";
+                    repeat = false;
+                };
+
+                "Mod+R" = {
+                    action.spawn-sh = "vicinae toggle";
+                    hotkey-overlay.title = "Toggle launcher: vicinae";
                     repeat = false;
                 };
 
@@ -223,10 +253,6 @@
 
 
                 # Noctalia binds
-                "Mod+R" = {
-                    action.spawn-sh = "noctalia msg panel-toggle launcher";
-                    hotkey-overlay.title = "Run an Application: noctalia";
-                };
                 "Mod+L" = {
                     action.spawn-sh = "noctalia msg screen-lock";
                     hotkey-overlay.title = "Lock: noctalia";

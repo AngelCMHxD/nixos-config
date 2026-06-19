@@ -9,6 +9,7 @@
     imports = [
         ./programs
         inputs.catppuccin.homeModules.catppuccin
+        inputs.vicinae.homeManagerModules.default
     ];
 
     # User/Home settings
@@ -18,6 +19,7 @@
     home.shell.enableFishIntegration = true;
     home.stateVersion = "25.11"; # This should match what is in configuration.nix's system.stateVersion.
     home.file.".face".source = ./assets/profile-icon.png;
+    services.vicinae.enable = true;
 
     # Clipboard manager.
     services.wl-clip-persist.enable = true;
@@ -53,6 +55,7 @@
         seahorse # Manage the keyring with a GUI.
         neovim # For editing files in the terminal.
         ente-auth # 2FA
+        ente-cli
         onlyoffice-desktopeditors # Office suite
         nautilus # File manager
         pwvucontrol # Audio control
