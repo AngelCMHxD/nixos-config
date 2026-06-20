@@ -18,6 +18,11 @@
                 };
             };
 
+            cursor = {
+                theme = "Bibata-Modern-Classic";
+                size = 20;
+            };
+
             outputs."eDP-1".mode = {
                 width = 1920;
                 height = 1080;
