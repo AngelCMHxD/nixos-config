@@ -128,6 +128,9 @@
                         {
                             app-id = "zed";
                         }
+                        {
+                            app-id = "zen";
+                        }
                     ];
 
                     default-column-width.proportion = 1.0;
