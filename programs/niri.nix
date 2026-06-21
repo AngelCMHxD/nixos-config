@@ -184,7 +184,7 @@
                 "Mod+F".action.maximize-column = {};
                 "Mod+Shift+F".action.fullscreen-window = {};
                 "Mod+Minus".action.set-column-width = "-10%";
-                "Mod+Plus".action.set-column-width = "10%";
+                "Mod+Plus".action.set-column-width = "+10%";
                 "Mod+Shift+V".action.toggle-window-floating = {};
 
                 "Mod+Left".action.focus-column-left = {};
