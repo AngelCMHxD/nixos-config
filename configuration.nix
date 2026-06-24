@@ -105,23 +105,7 @@
     programs.noctalia-greeter = {
         enable = true;
         package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
-
-        settings.cursor = {
-            theme = "Bibata-Modern-Classic";
-            size = 20;
-            package = pkgs.bibata-cursors;
-        };
     };
-
-    systemd.tmpfiles.rules = [
-        "L+ /var/lib/noctalia-greeter/greeter.conf - - - - ${pkgs.writeText "greeter.conf" ''
-            default_session=Niri
-            session=Niri
-            default_user=angel
-            scale=1
-            scheme=Catppuccin
-        ''}"
-    ];
 
     # Use pipewire for audio.
     security.rtkit.enable = true;
