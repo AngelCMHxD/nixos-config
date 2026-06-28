@@ -107,6 +107,8 @@
         };
     };
 
+    services.kdeconnect.enable = true;
+
     # GTK theming.
     gtk = {
         enable = true;
