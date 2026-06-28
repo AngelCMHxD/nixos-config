@@ -174,6 +174,10 @@
                     hotkey-overlay.title = "Close Window";
                     repeat = false;
                 };
+                "Mod+Shift+MouseRight" = {
+                    action.close-window = {};
+                    repeat = false;
+                };
 
                 "Mod+R" = {
                     action.spawn-sh = "vicinae toggle";
@@ -189,11 +193,15 @@
 
                 "Mod+Left".action.focus-column-left = {};
                 "Mod+Right".action.focus-column-right = {};
+                "Mod+Shift+WheelScrollUp".action.focus-column-left = {};
+                "Mod+Shift+WheelScrollDown".action.focus-column-right = {};
                 "Mod+Up".action.focus-window-or-workspace-up = {};
                 "Mod+Down".action.focus-window-or-workspace-down = {};
 
                 "Mod+Shift+Left".action.move-column-left = {};
                 "Mod+Shift+Right".action.move-column-right = {};
+                "Mod+Ctrl+Shift+WheelScrollUp".action.move-column-left = {};
+                "Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right = {};
                 "Mod+Shift+Up".action.move-window-up = {};
                 "Mod+Shift+Down".action.move-window-down = {};
 
