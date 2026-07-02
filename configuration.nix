@@ -107,6 +107,11 @@
         package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
+    programs.appimage = {
+        enable = true;
+        binfmt = true;
+    };
+
     # Use pipewire for audio.
     security.rtkit.enable = true;
     services.pipewire = {
