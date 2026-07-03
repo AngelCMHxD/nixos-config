@@ -65,6 +65,7 @@
         steam
         gamescope
         r2modman
+        olympus # Celeste mod manager
         (heroic.override {
             extraPkgs = pkgs': with pkgs'; [
                 gamescope
