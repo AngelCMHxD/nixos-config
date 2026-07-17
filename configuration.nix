@@ -73,6 +73,14 @@
     # Enable envfs and nix-ld for better support of non-Nix apps.
     services.envfs.enable = true;
     programs.nix-ld.enable = true;
+    programs.nix-ld.libraries = with pkgs; [
+        libsecret
+        glib
+    ];
+
+    environment.sessionVariables = {
+        LD_LIBRARY_PATH = [ "/run/current-system/sw/share/nix-ld/lib" ];
+    };
 
     # Latest kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
