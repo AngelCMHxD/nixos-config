@@ -82,6 +82,7 @@
         python3
         bun
         deno
+        nodejs
         bruno
 
         usbutils # For lsusb, etc.
