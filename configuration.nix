@@ -30,6 +30,9 @@
     };
 
     catppuccin.enable = true;
+    catppuccin.sources = inputs.catppuccin.packages.${pkgs.stdenv.hostPlatform.system}.overrideScope (_: _: {
+        whiskers = pkgs.catppuccin-whiskers;
+    });
     catppuccin.autoEnable = false;
     catppuccin.tty.enable = true; # Enable Catppuccin TTY theme.
 

@@ -27,6 +27,9 @@
 
     # Theming
     catppuccin.enable = true;
+    catppuccin.sources = inputs.catppuccin.packages.${pkgs.stdenv.hostPlatform.system}.overrideScope (_: _: {
+        whiskers = pkgs.catppuccin-whiskers;
+    });
     catppuccin.autoEnable = false;
     catppuccin.accent = "mauve";
     catppuccin.flavor = "macchiato";
