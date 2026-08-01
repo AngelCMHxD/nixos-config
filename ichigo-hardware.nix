@@ -1,4 +1,4 @@
-{ config, lib, modulesPath, ... }:
+{ config, lib, modulesPath, pkgs, ... }:
 
 {
     imports = [
@@ -44,8 +44,16 @@
         }
     ];
 
+    hardware.amdgpu.opencl.enable = true;
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
+    hardware.graphics.extraPackages = with pkgs; [
+        mesa.opencl # Enables Rusticl (OpenCL) support
+    ];
+
+    environment.variables = {
+        RUSTICL_ENABLE = "radeonsi";
+    };
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

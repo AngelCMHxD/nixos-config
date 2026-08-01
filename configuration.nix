@@ -143,7 +143,6 @@
         # Packages on home.nix
     };
 
-
     # List of packages installed in system profile.
     # Use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
@@ -153,6 +152,7 @@
         xdg-desktop-portal
         xdg-desktop-portal-wlr
         xdg-desktop-portal-gtk
+        davinci-resolve
 
         sbctl # For managing secure boot keys.
         nil # Nix LSP
