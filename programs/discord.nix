@@ -57,7 +57,6 @@
                 bypassPinPrompt.enable = true;
                 clearUrls.enable = true;
                 fixImagesQuality.enable = true;
-                friendsSince.enable = true;
                 ghosted.enable = true;
                 mentionAvatars.enable = true;
                 homeTyping.enable = true;
