@@ -10,5 +10,6 @@
     services.flatpak.packages = [
         "org.vinegarhq.Sober"
         "sh.ppy.osu"
+        "org.kde.krita"
     ];
 }
