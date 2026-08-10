@@ -64,6 +64,7 @@
         nautilus # File manager
         pwvucontrol # Audio control
         obsidian # Note-taking app
+        slack
 
         # Games
         steam
