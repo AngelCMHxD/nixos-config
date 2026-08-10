@@ -85,6 +85,8 @@
         deno
         nodejs
         bruno
+        unityhub
+        godot
 
         usbutils # For lsusb, etc.
         bat # Replacement for cat with syntax highlighting.
