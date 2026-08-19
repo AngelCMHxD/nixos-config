@@ -279,7 +279,7 @@
 
                 # Noctalia binds
                 "Mod+L" = {
-                    action.spawn-sh = "noctalia msg screen-lock";
+                    action.spawn-sh = "noctalia msg session lock";
                     hotkey-overlay.title = "Lock: noctalia";
                 };
                 "Mod+Ctrl+Shift+S" = {
