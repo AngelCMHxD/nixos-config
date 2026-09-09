@@ -43,7 +43,6 @@
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             };
 
-            spacesForce = true;
             spaces = {
                 "Personal" = {
                     id = "c6de089c-410d-4206-961d-ab11f988d40a";
