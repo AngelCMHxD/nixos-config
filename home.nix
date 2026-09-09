@@ -89,6 +89,7 @@
         unityhub
         godot
 
+        steam-run # FHS env
         usbutils # For lsusb, etc.
         bat # Replacement for cat with syntax highlighting.
         lsd # Replacement for ls with icons and more features.
