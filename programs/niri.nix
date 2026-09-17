@@ -141,9 +141,16 @@
                     default-column-width.proportion = 1.0;
                 }
                 {
-                    matches = [{
-                        app-id = "vicinae";
-                    }];
+                    matches = [
+                        {
+                            app-id = "vicinae";
+                        }
+                        {
+                            app-id = "^dev\\.zed\\.Zed$";
+                        }
+                    ];
+
+		    draw-border-with-background = false;
                     background-effect = {
                         blur = true;
                         xray = false;

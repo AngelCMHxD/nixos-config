@@ -15,7 +15,7 @@
             beautifulLyrics
         ];
 
-        theme = spicePkgs.themes.comfy;
-        colorScheme = "catppuccin-macchiato";
+        theme = spicePkgs.themes.catppuccin;
+        colorScheme = "macchiato";
     };
 }
