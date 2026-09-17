@@ -13,7 +13,7 @@
             "deno"
         ];
 
-        mutableUserSettings = false;
+        mutableUserSettings = true;
         userSettings = {
             cli_default_open_behavior = "new_window";
             project_panel = {
