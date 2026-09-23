@@ -31,6 +31,11 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        helium = {
+            url = "github:oxcl/nix-flake-helium-browser";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         zen-browser = {
             url = "github:0xc000022070/zen-browser-flake/beta";
             inputs = {
@@ -60,7 +65,7 @@
             modules = [
                 {
                     nixpkgs.config.allowUnfree = true;
-                    nixpkgs.overlays = [ inputs.nix4vscode.overlays.default inputs.niri.overlays.niri ];
+                    nixpkgs.overlays = [ inputs.helium.overlays.default inputs.nix4vscode.overlays.default inputs.niri.overlays.niri ];
                 }
                 inputs.vicinae.nixosModules.default
                 ./configuration.nix

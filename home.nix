@@ -65,6 +65,7 @@
         pwvucontrol # Audio control
         obsidian # Note-taking app
         slack
+        helium # browser
 
         # Games
         steam
