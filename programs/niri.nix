@@ -136,6 +136,12 @@
                         {
                             app-id = "zen";
                         }
+                        {
+                            app-id = "slack";
+                        }
+                        {
+                            app-id = "helium";
+                        }
                     ];
 
                     default-column-width.proportion = 1.0;
