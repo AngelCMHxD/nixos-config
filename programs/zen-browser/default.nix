@@ -9,7 +9,6 @@
     xdg.configFile."zen/default/chrome/userContent.css".source = ./userContent.css;
     programs.zen-browser = {
         enable = true;
-        setAsDefaultBrowser = true;
 
         policies = let
             mkExtensionSettings = builtins.mapAttrs (_: pluginId: {
